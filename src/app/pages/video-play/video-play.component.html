@@ -1,0 +1,37 @@
+<div class="container">
+    <div nz-row nzGutter="8">
+        <div nz-col nzSpan="24">
+            <div class="category-wrap">
+                <button nz-button nzType="primary" [ngClass]="{'ant-btn-primary': selectedType=='pinhu'}"  nzShape="round"  (click)="getVedioList('pinhu')">平湖</button>
+                <button nz-button [ngClass]="{'ant-btn-primary': selectedType=='haiyan'}" nzShape="round" (click)="getVedioList('haiyan')">海盐</button>
+            </div>
+        </div>
+        <div nz-col nzSpan="7">
+            <nz-range-picker [nzFormat]="'yyyy/MM/dd'"></nz-range-picker>
+        </div>
+        <div nz-col nzSpan="2">
+            <button nz-button nzType="primary" (click)="searchData()">查询</button>
+        </div>
+        <div nz-col nzSpan="24">
+            <div class="video-list">
+                <div nz-row nzGutter="16">
+                   <div nz-col nzSpan="6" *ngFor="let item of displayData">
+                    <div (click)="playVideo(item)" style="padding: 0">
+                        <div class="video-thumb">
+                        </div>
+                        <div class="video-title">
+                            <span class="name">{{item.filename}}</span>
+                            <span class="date">{{item.date}}</span>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<nz-modal nzWidth="700" [(nzVisible)]="isVisible" nzTitle="{{fileObj.name}}" (nzOnCancel)="handleCancel()" [nzFooter]="null" [nzBodyStyle]="{padding:0,height:'393px'}">
+    <video src="{{fileObj.path}}" controls="controls" width="100%">
+        您的浏览器不支持 video 标签。
+    </video>
+</nz-modal>

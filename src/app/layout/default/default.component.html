@@ -1,0 +1,32 @@
+<nz-layout>
+    <nz-header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="">
+            </div>
+            <div class="menu">
+                <ul class="nav">
+                    <li  class="dashboard" [routerLink]="[ '/dataForecast' ]" routerLinkActive="active">
+                        <span class="title-zh">数值预报</span>
+                        <span class="title-en">Numerical Prediction</span>
+                    </li>
+                    <li [routerLink]="[ '/coastal' ]" routerLinkActive="active">
+                        <span class="title-zh">沿海预报</span>
+                        <span class="title-en">Coastal Prediction</span>
+                    </li>
+                    <li [routerLink]="[ '/keyGuarantee' ]" routerLinkActive="active">
+                        <span class="title-zh">重点保障预报</span>
+                        <span class="title-en">Key guarantee Prediction</span>
+                    </li>
+                    <li [routerLink]="[ '/videoPlay' ]" routerLinkActive="active">
+                        <span class="title-zh">视频节目</span>
+                        <span class="title-en">Video Program</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nz-header>
+    <nz-content>
+        <router-outlet></router-outlet>
+    </nz-content>
+</nz-layout>

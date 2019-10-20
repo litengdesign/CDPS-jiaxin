@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="60px" viewBox="0 0 54 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape Copy 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M865,515 C864.966553,515 849,500.836556 849,492 C849,483.163444 856.163444,476 865,476 C873.836556,476 881,483.163444 881,492 C881,500.836556 865.033447,515 865,515 Z M865,497 C868.313708,497 871,494.313708 871,491 C871,487.686292 868.313708,485 865,485 C861.686292,485 859,487.686292 859,491 C859,494.313708 861.686292,497 865,497 Z" id="path-1"></path>
+        <filter x="-59.4%" y="-35.9%" width="218.8%" height="197.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.11218184   0 0 0 0 0.565396471  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="index3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-838.000000, -470.000000)">
+        <g id="Combined-Shape-Copy-11">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#EBF5FF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

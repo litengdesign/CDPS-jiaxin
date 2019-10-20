@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="index1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-883.000000, -125.000000)">
+        <g id="Group-17" transform="translate(750.000000, 114.000000)" fill="#222D65">
+            <g id="Group-16">
+                <g id="Group-15" transform="translate(27.000000, 10.000000)">
+                    <g id="Group-5" transform="translate(106.000000, 1.000000)">
+                        <path d="M12.5,23 C6.70101013,23 2,18.2989899 2,12.5 C2,6.70101013 6.70101013,2 12.5,2 C18.2989899,2 23,6.70101013 23,12.5 C23,18.2989899 18.2989899,23 12.5,23 Z M12.5,19.5 C16.3659932,19.5 19.5,16.3659932 19.5,12.5 C19.5,8.63400675 16.3659932,5.5 12.5,5.5 C8.63400675,5.5 5.5,8.63400675 5.5,12.5 C5.5,16.3659932 8.63400675,19.5 12.5,19.5 Z" id="Combined-Shape"></path>
+                        <path d="M19,5 C15.601626,0.607843137 9.26829268,-0.167243368 0,2.67474048 C7.41463415,2.15801615 13.7479675,2.93310265 19,5 Z" id="Path-40"></path>
+                        <path d="M6,19 C9.47368421,24.2228682 15.4736842,25.3539836 24,22.3933461 C18.3157895,22.9854736 12.3157895,21.8543582 6,19 Z" id="Path-41"></path>
+                        <path d="M31.5,12 C28.101626,7.60784314 21.7682927,6.83275663 12.5,9.67474048 C19.9146341,9.15801615 26.2479675,9.93310265 31.5,12 Z" id="Path-40" transform="translate(22.000000, 10.000000) rotate(-270.000000) translate(-22.000000, -10.000000) "></path>
+                        <path d="M-6,12 C-2.52631579,17.2228682 3.47368421,18.3539836 12,15.3933461 C6.31578947,15.9854736 0.315789474,14.8543582 -6,12 Z" id="Path-41" transform="translate(3.000000, 14.500000) rotate(-270.000000) translate(-3.000000, -14.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

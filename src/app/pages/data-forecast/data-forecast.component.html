@@ -1,0 +1,72 @@
+<div id="content">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="加载中...">
+        <app-arcgis-map (checked)="getPublishtime()"></app-arcgis-map>
+    </nz-spin>
+    <!-- 子菜单 -->
+    <div class="dropDown">
+        <ul>
+            <li [ngClass]="{'active': item.active}" *ngFor="let item of server.elements" (click)="changeLayer(item)">
+                <i nz-icon [nzIconfont]="item.icon"></i>
+                <span>{{item.name}}</span>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+        <p class="publishtime">预报发布时间:{{publishtime}}</p>
+    </div>
+    <!-- 进度条 -->
+    <div class="progress">
+        <div class="bars">
+            <span class="play-icon play" [ngClass]="{'active': activePlay}"  (click)="playLayer()">
+                <i nz-icon [nzIconfont]="'iconPath'"></i>
+            </span>
+            <span class="play-icon stop" [ngClass]="{'active': !activePlay}" (click)="stopLayer()">
+                <i nz-icon [nzIconfont]="'iconGroup4'"></i>
+            </span>
+            <ng-container *ngFor="let item of  barList;let i = index">
+                <div class="bar" title="{{name}}" [ngClass]="{'active': item.active,'actived': item.actived}" (click)="targetBar(i,true)" nzTitle="{{item.name}}" nzPlacement="bottom"  nz-tooltip >
+                    <span *ngIf="i%6==0">{{item.name}}</span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <!-- 弹出框 -->
+    <div class="popover" [ngStyle]="popoverStyle" *ngIf="showPop">
+        <h3 class="header" style="padding-bottom: 12px">
+            <span>平湖近岸海域－未来72小时{{selectedType.name}}预报（北纬N{{activePoint.longitude | pointerFloor}} 东经E{{activePoint.latitude | pointerFloor}}）</span>
+            <span class="icon-close"  (click)="showPop=false"><i nz-icon nzType="close" nzTheme="outline"></i></span>
+        </h3>
+        <div class="pop-content">
+            <div nz-row nzGutter="0">
+                <div nz-col nzSpan="24" nzOffset="0">
+                    <!-- <app-highcharts [chartsObj]='chartData'></app-highcharts> -->
+                    <app-echarts [chartOption]='chartData'></app-echarts>
+                </div>
+                <div nz-col nzSpan="24" nzOffset="0">
+                    <nz-table #basicTable nzVirtualScroll [nzVirtualItemSize]="54" [nzData]="listOfData"
+                            [nzVirtualForTrackBy]="trackByIndex" nzSize="small" [nzFrontPagination]="false" [nzShowPagination]="false"
+                            [nzScroll]="{ x: '0px', y: '140px' }">
+                        <thead>
+                            <tr>
+                                <th nzWidth="128px">预报时间</th>
+                                <th nzWidth="128px" *ngIf="selectedType.name=='海面风'">风速（m/s）</th>
+                                <th nzWidth="128px" *ngIf="selectedType.name=='海浪'">浪高(m)</th>
+                                <th nzWidth="128px" *ngIf="selectedType.name=='海流'">流速(m/s)</th>
+                                <th nzWidth="128px" *ngIf="selectedType.name=='海温'">海温(度)</th>
+                                <th nzWidth="128px" *ngIf="selectedType.name=='盐度'">盐度(度)</th>
+                                <th nzWidth="128px" *ngIf="selectedType.name=='天文潮'">潮高(m)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-template nz-virtual-scroll let-data let-index="index">
+                                <tr *ngFor="let data of basicTable.data">
+                                    <td nzWidth="128px">{{ data.time }}</td>
+                                    <td nzWidth="128px">{{ data.speed }}</td>
+                                </tr>
+                            </ng-template>
+                        </tbody>
+                    </nz-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

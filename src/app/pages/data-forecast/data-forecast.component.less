@@ -1,0 +1,120 @@
+.dropDown{
+    position: fixed;
+    left: 50%;
+    top: 120px;
+    margin-left: -210px;
+    ul{
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        float: left;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px 1px rgba(0,0,0,0.4);
+        background-color: #fff;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -7.5px;
+            display: block;
+            border-top: 10px solid #fff;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        li{
+            float: left;
+            padding: 10px 30px;
+            cursor: pointer;
+            span,i{
+                display: block;
+            }
+            span{
+                line-height: 20px;
+            }
+            i{
+                line-height: 25px;
+            }
+            &.active,&:hover{
+                position: relative;
+                color: #35B7FE;
+                span:after{
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    border-bottom: 2px solid #209CFE;
+                    top: 85%;
+                    left: 50%;
+                    margin-left: -10px;
+                }
+            }
+        }
+    }
+    .clearfix{
+        display: block;
+        clear: both;
+    }
+    .publishtime{
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+}
+.progress{
+    height: 50px;
+    width: 1210px;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50vw - 600px);
+    padding: 12px 20px 18px 20px;
+    background-color: rgba(255,255,255,.5);
+    border:1px solid #fff;
+    .bars{
+        .play-icon{
+            float: left;
+            padding: 1px 5px;
+            border-radius: 2px;
+            color: #fff;
+            background-color: #222D65;
+            margin-left: 7px;
+            font-size: 12px;
+            line-height: 20px;
+            &.active,&:hover{
+                background: linear-gradient(#36B8FE, #209CFE); 
+            }
+        }
+        .bar{
+            position: relative;
+            float: left;
+            background-color: #222D65;
+            width: 8px;
+            height: 20px;
+            margin-left: 7px;
+            border-radius: 4px;
+            &.active{
+                background: linear-gradient(to top, #36B8FE, #209CFE);;
+                height: 44px;
+                margin-top: -24px;
+                span{
+                    margin-top: 24px;
+                }
+            }
+            &.actived{
+                background: linear-gradient(to top,#36B8FE, #209CFE);;
+            }
+            span{
+                font-size: 12px;
+                font-family: SimSun;
+                color: #222D65;
+                white-space: nowrap;
+                position: absolute;
+                top: 20px;
+                left: -17px;
+                line-height: 18px;
+            }
+        }
+    }
+}

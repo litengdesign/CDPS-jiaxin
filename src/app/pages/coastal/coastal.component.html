@@ -1,0 +1,24 @@
+<app-arcgis-map (checked)="getPublishtime()"></app-arcgis-map>
+    <!-- 弹出框 -->
+    <div class="popover" [ngStyle]="popoverStyle" *ngIf="showPop">
+        <h3 class="header">
+            <div class="list">
+                <span *ngFor="let item of server.elements" [ngClass]="{'active': item.active}">{{item.name}}</span>
+            </div>
+            <span class="icon-close" (click)="showPop=false"><i nz-icon nzType="close"
+                    nzTheme="outline"></i></span>
+        </h3>
+        <div class="pop-content">
+            <div nz-row nzGutter="0">
+                <div nz-col nzSpan="4" nzOffset="0">
+                    <span class="title">平湖-{{selectedType.name}}预报</span>
+                </div>
+                <div nz-col nzSpan="3" nzOffset="17">
+                    <button nz-button [nzSize]="'small'" nzType="primary" (click)="getVedioList('haiyan')">大面图片</button>
+                </div>
+                <div nz-col nzSpan="24" nzOffset="0">
+                    <app-echarts [chartOption]='chartData'></app-echarts>
+                </div>
+            </div>
+        </div>
+    </div>

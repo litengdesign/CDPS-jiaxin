@@ -1,0 +1,123 @@
+*{
+  outline: none;
+}
+#content{
+  position: relative;
+  height: 100vh;
+}
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.menu{
+    .ant-menu-submenu-title{
+        padding: 20px 0;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+#viewDiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+.esri-popup__content ul{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  li{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+.esri-component.esri-attribution.esri-widget{
+  display: none;
+}
+.esri-view-height-less-than-medium .esri-popup__main-container{
+  max-height: 420px;
+}
+.esri-ui-top-left{
+  top: 100px;
+}
+.ant-card{
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover{
+    .video-thumb{
+      opacity: 0.7;
+    }
+  }
+}
+
+.ant-btn-primary{
+  background:linear-gradient(#36B8FE, #209CFE); 
+  border:none;
+}
+.highcharts-credits{
+  display: none;
+  opacity: 0;
+}
+.popover{
+    position: fixed;
+    width: 710px;
+    max-height: 500px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px #229EFE;
+    transform-origin: 50% 100%;
+    border-radius: 8px;
+    .header{
+        font-size: 14px;
+        padding: 12px 15px 0;
+        margin: 0 auto 0 0;
+        display: block;
+        white-space: pre-wrap;
+        word-break: break-all;
+        word-wrap: break-word;
+        background: linear-gradient(#36B8FE, #209CFE); ;
+        color: #fff;
+        border-radius: 8px 8px 0 0;
+        .icon-close{
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
+        .list{
+          height: 27px;
+          span{
+            padding:10px 20px;
+            color:#fff;
+            font-weight: bold;
+            cursor: pointer;
+            &.active,&:hover{
+              background-color: #fff;
+              border-radius: 6px 6px 0 0;
+              color: #29A8FE;
+            }
+          }
+        }
+    }
+    .pop-content{
+        margin: 15px;
+    }
+    .popup-shadow{
+        position: absolute;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-width: 4.24264069px;
+        border-style: solid;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        box-shadow: 3px -3px 7px rgba(0,0,0,.07);
+        border-color: transparent transparent #fff #fff;
+        bottom: 50%;
+        left:-6px;
+    }
+}
